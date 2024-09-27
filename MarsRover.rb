@@ -23,6 +23,10 @@ end
 #   how to separate the user input in 3 different variables?
 
 
+# Following code should create a new MarsRovers object with given variables
+rover_position = MarsRovers.new (x,y,direction)
+puts "The System figured that the original position of the rover is: #{@x}, #{@y} & is facing #{@direction} direction"
+
 def get_user_input
 
     puts"Welcome to Mars, let's deign the game, enter the size of the grid you want to play with"
