@@ -12,10 +12,10 @@ end
 
 #Now that we know, where is the rover on the grid, we need to do 2 activities here
 # 1. Validate if the input is valid
-    #def  Validate, what does this default method do?
+    #def Validate
+        #what does this default method do?
     #end
-
-    #distracted for 10 mins
+    #Learning to validate an input
 
 # 2. Separte the into 3 parts:
 #    x coordinate, y coordinate & the direction where the rover faces.
