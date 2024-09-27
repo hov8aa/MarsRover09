@@ -16,10 +16,12 @@ end
         #what does this default method do?
     #end
     #Learning to validate an input
+#   After a break, I am realizing that, the validation part need to be a second priority.
 
 # 2. Separte the into 3 parts:
 #    x coordinate, y coordinate & the direction where the rover faces.
 #   how to separate the user input in 3 different variables?
+
 
 def get_user_input
 
