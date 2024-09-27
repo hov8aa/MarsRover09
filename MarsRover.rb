@@ -24,6 +24,7 @@ end
 
 
 # Following code should create a new MarsRovers object with given variables
+# I learnt that "attr_accessor" can help break down the user input. Need more details.
 rover_position = MarsRovers.new (x,y,direction)
 puts "The System figured that the original position of the rover is: #{@x}, #{@y} & is facing #{@direction} direction"
 
