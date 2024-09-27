@@ -27,6 +27,8 @@ end
 rover_position = MarsRovers.new (x,y,direction)
 puts "The System figured that the original position of the rover is: #{@x}, #{@y} & is facing #{@direction} direction"
 
+#Adding distracted 10 mins.
+
 def get_user_input
 
     puts"Welcome to Mars, let's deign the game, enter the size of the grid you want to play with"
