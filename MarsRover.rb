@@ -41,9 +41,9 @@ def get_user_input
     rover_facing_direction = rover_facing_direction[0]
     puts "Hmm, Direction starts with #{rover_facing_direction}"
     #Now we need to get the instructions from the player for further operation
-    puts "Please enter the instructions for the rover to move with 3 characters 'L','M' &'R' in any required sequence 
-    where 'L' and 'R' makes the rover spin 90 degrees left or right respectively, without moving from its current spot.
-    'M' means move forward one grid point, and maintain the same heading."
+    puts "Please enter the instructions for the rover to move with 3 characters 'L','M' &'R' in any required sequence"
+    #where 'L' and 'R' makes the rover spin 90 degrees left or right respectively, without moving from its current spot.
+    #'M' means move forward one grid point, and maintain the same heading."
     movement = gets.chomp
 
     puts "Let me move the rover with #{movement} instructions, & give you the final position, please wait..."
@@ -52,7 +52,15 @@ def get_user_input
 
     #Now, process the instructions to move the rover
     #until movement.length < 0
-        #instruction[movement.length]
+
+    i = 0
+    while i <= movement.length
+        instruction = movement.slice(i)
+        if instruction == "L"
+            puts "The current instruction is L"
+        end
+        i +=1
+    end
 
 end
 
