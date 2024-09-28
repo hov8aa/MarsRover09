@@ -10,7 +10,7 @@ def get_user_input
     puts "Now, assume that you have the opportunity to place the rover anywhere on this grid, where would you place the rover, on Y coordinate?"
     rover_position_y_coordinate = gets.chomp
 
-    puts "I am assuming the position lies on the grid, #{rover_position_x_coordinate},#{rover_position_y_coordinate} (we'll check soon)"
+    puts "I am assuming the position #{rover_position_x_coordinate} #{rover_position_y_coordinate} lies on the grid. (we'll check soon)"
 
     puts "Wait a second, we missed, What direction the rover is facing, East/West/North/South?"
     rover_facing_direction = gets
@@ -68,29 +68,36 @@ def get_user_input
         end
 
         if instruction == "M"
-            puts "The current instruction is M, Move forward"
+            puts "The current instruction is M, Moving forward"
             #to more the rover one step forward, we need to operate on the coordiates in the direction of it's face
 
             if rover_facing_direction == "E"
-                #add +1 to x coordinate
+                #+1 to x coordinate
+                rover_position_x_coordinate = rover_position_x_coordinate.to_f
                 rover_position_x_coordinate += 1
             
             elsif rover_facing_direction == "N"
-                #add +1 to y coordinate
+                #+1 to y coordinate
+                rover_position_y_coordinate = rover_position_y_coordinate.to_f
                 rover_position_y_coordinate += 1
             
             elsif rover_facing_direction == "W"
-                #add -1 to x coordinate
+                #-1 to x coordinate
+                rover_position_x_coordinate = rover_position_x_coordinate.to_f
                 rover_position_x_coordinate -= 1
             
             else rover_facing_direction == "S"
-                #add -1 to y coordinate
+                #-1 to y coordinate
+                rover_position_y_coordinate = rover_position_y_coordinate.to_f
                 rover_position_y_coordinate -= 1
             end
 
         end
         i +=1
     end
+    rover_position_x_coordinate = rover_position_x_coordinate.to_i
+    rover_position_y_coordinate = rover_position_y_coordinate.to_i
+
     puts "System just finished processing your instructions, the new coordinates of the rover are #{rover_position_x_coordinate}, #{rover_position_y_coordinate}"
     puts "Happy Rovering in an infinite world"
 end
