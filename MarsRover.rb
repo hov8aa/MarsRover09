@@ -8,6 +8,11 @@ class MarsRovers
         @Y = y 
         @direction = direction
     end
+
+    marsrover = MarsRovers.new (rover_position_x_coordinate , rover_position_y_coordinate, rover_facing_direction)
+
+    #puts "The System figured that the original position of the rover is: #{rover_position_x_coordinate}, #{rover_position_y_coordinate} & is facing #{rover_facing_direction} direction"
+
 end
 
 #Now that we know, where is the rover on the grid, we need to do 2 activities here
@@ -19,9 +24,7 @@ end
 #   After a break, I am realizing that, the validation part need to be a second priority.
 
 #   Following code should create a new MarsRovers object with given variables
-#marsrover = MarsRovers.new (rover_position_x_coordinate,rover_position_y_coordinate,rover_facing_direction)
-
-#puts "The System figured that the original position of the rover is: #{@x}, #{@y} & is facing #{@direction} direction"
+#marsrover = MarsRovers.new ("rover_position_x_coordinate","rover_position_y_coordinate","rover_facing_direction")
 
 def get_user_input
 
