@@ -1,29 +1,5 @@
-#class MarsRovers
-#    defining the directions to move the rover in clock wise direction
-#    DIRECTIONS = ['N','W','S','E']
-
-#    #initialize a new rover object with current coordinates
-#    def initialize (x,y,direction)
-#        @X = x
-#        @Y = y 
-#        @direction = direction
-#    end
-#    marsrover = MarsRovers.new (rover_position_x_coordinate , rover_position_y_coordinate, rover_facing_direction)
-#    puts "The System figured that the original position of the rover is: #{rover_position_x_coordinate}, #{rover_position_y_coordinate} & is facing #{rover_facing_direction} direction"
-#end
-
-#Now that we know, where is the rover on the grid, we need to do 2 activities here
-# 1. Validate if the input is valid
-    #def Validate
-        #what does this default method do?
-    #end
-    #Learning to validate an input
-#   After a break, I am realizing that, the validation part need to be a second priority.
-
-#   Following code should create a new MarsRovers object with given variables
-#marsrover = MarsRovers.new ("rover_position_x_coordinate","rover_position_y_coordinate","rover_facing_direction")
-
 def get_user_input
+
     puts"Welcome to Mars, let's deign the game, enter the size of the grid you want to play with"
     grid = gets
     puts "I hope the playground is big enough #{grid}"
@@ -51,15 +27,13 @@ def get_user_input
     puts "I see, There are #{movement.length} instructions."
 
     #Now, process the instructions to move the rover
-    #until movement.length < 0
-
     i = 0
     while i <= movement.length
         instruction = movement.slice(i)
         if instruction == "L"
             puts "The current instruction is L, Turn Left"
             #To turn the rover to left direction from it's currrent position, we need to know it's current direction.
-            
+            #rover_facing_direction = 
         end
 
         if instruction == "R"
@@ -72,7 +46,6 @@ def get_user_input
 
         i +=1
     end
-
 end
 
 get_user_input
