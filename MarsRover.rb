@@ -48,9 +48,12 @@ def get_user_input
 
     puts "Let me move the rover with #{movement} instructions, & give you the final position, please wait..."
 
+    puts "I see, There are #{movement.length} instructions."
+
     #Now, process the instructions to move the rover
     #until movement.length < 0
-    puts "I see, There are #{movement.length} instructions."
+        #instruction[movement.length]
+
 end
 
 get_user_input
