@@ -31,7 +31,7 @@ def get_user_input
     while i <= movement.length
         instruction = movement.slice(i)
         if instruction == "L"
-            puts "The current instruction is L, Turn Left"
+            puts "The current instruction is L & Current Rover direction is #{rover_facing_direction}, Turning Left"
             #To turn the rover to left direction from it's currrent position, we need to know it's current direction.
             if rover_facing_direction == "E"
                 rover_facing_direction = "N"
@@ -49,15 +49,50 @@ def get_user_input
         end
 
         if instruction == "R"
-            puts "The current instruction is R, Turn Right"
+            puts "The current instruction is R & Current Rover direction is #{rover_facing_direction}, Turning Right"
+            #To turn the rover to left direction from it's currrent position, we need to know it's current direction.
+            if rover_facing_direction == "E"
+                rover_facing_direction = "S"
+            
+            elsif rover_facing_direction == "N"
+                rover_facing_direction = "E"
+            
+            elsif rover_facing_direction == "W"
+                rover_facing_direction = "N"
+            
+            else rover_facing_direction == "S"
+                rover_facing_direction = "W"
+            end
+            puts "New Rover direction is #{rover_facing_direction}"
+
         end
 
         if instruction == "M"
             puts "The current instruction is M, Move forward"
-        end
+            #to more the rover one step forward, we need to operate on the coordiates in the direction of it's face
 
+            if rover_facing_direction == "E"
+                #add +1 to x coordinate
+                rover_position_x_coordinate += 1
+            
+            elsif rover_facing_direction == "N"
+                #add +1 to y coordinate
+                rover_position_y_coordinate += 1
+            
+            elsif rover_facing_direction == "W"
+                #add -1 to x coordinate
+                rover_position_x_coordinate -= 1
+            
+            else rover_facing_direction == "S"
+                #add -1 to y coordinate
+                rover_position_y_coordinate -= 1
+            end
+
+        end
         i +=1
     end
+    puts "System just finished processing your instructions, the new coordinates of the rover are #{rover_position_x_coordinate}, #{rover_position_y_coordinate}"
+    puts "Happy Rovering in an infinite world"
 end
 
 get_user_input
