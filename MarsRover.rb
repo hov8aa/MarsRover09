@@ -24,7 +24,6 @@
 #marsrover = MarsRovers.new ("rover_position_x_coordinate","rover_position_y_coordinate","rover_facing_direction")
 
 def get_user_input
-
     puts"Welcome to Mars, let's deign the game, enter the size of the grid you want to play with"
     grid = gets
     puts "I hope the playground is big enough #{grid}"
@@ -41,16 +40,17 @@ def get_user_input
     rover_facing_direction = gets
     rover_facing_direction = rover_facing_direction[0]
     puts "Hmm, Direction starts with #{rover_facing_direction}"
-
     #Now we need to get the instructions from the player for further operation
-    puts "Please enter the instructions for the rover to move with 3 characters 'L','M' &'R' in any required sequence where 'L' and 'R' makes the rover spin 90 degrees left or right respectively, without moving from its current spot. 'M' means move forward one grid point, and maintain the same heading."
+    puts "Please enter the instructions for the rover to move with 3 characters 'L','M' &'R' in any required sequence 
+    where 'L' and 'R' makes the rover spin 90 degrees left or right respectively, without moving from its current spot.
+    'M' means move forward one grid point, and maintain the same heading."
     movement = gets.chomp
 
     puts "Let me move the rover with #{movement} instructions, & give you the final position, please wait..."
 
     #Now, process the instructions to move the rover
-    
-
+    #until movement.length < 0
+    puts "I see, There are #{movement.length} instructions."
 end
 
 get_user_input
