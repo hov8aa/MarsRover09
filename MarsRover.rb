@@ -28,10 +28,15 @@ end
 
 #attr_accessor :position somewhere holds the key, But I need to go to the sabji mandi.
 
-rover_position = MarsRovers.new (x,y,direction)
-puts "The System figured that the original position of the rover is: #{@x}, #{@y} & is facing #{@direction} direction"
+#Starting the day to lear to code 12:15
+#Need to ask again, how to separate the user input in different variables? 
+#(do I really need to, is also an important question because maybe the language provides a way to handle this without that)
+#
 
-#Adding distracted 10 mins.
+#x,y,@direction = gets.chomp.split MarsRovers.new
+
+#rover_position = MarsRovers.new (x,y,direction)
+#puts "The System figured that the original position of the rover is: #{@x}, #{@y} & is facing #{@direction} direction"
 
 def get_user_input
 
@@ -39,9 +44,14 @@ def get_user_input
     grid = gets
     puts "I hope the playground is big enough #{grid}"
 
-    puts "Now, assume that you have the opportunity to place the rover anywhere on this grid, where would you place the rover & facing which direction?"
-    position = gets
-    puts "I am assuming the position lies on the grid, #{position} (we'll check soon)"
+    puts "Now, assume that you have the opportunity to place the rover anywhere on this grid, where would you place the rover?"
+    rover_position_coordinates = gets
+    puts "I am assuming the position lies on the grid, #{rover_position_coordinates} (we'll check soon)"
+
+    puts "Wait a second, we missed, What direction the rover is facing, East/West/North/South?"
+    rover_facing_direction = gets
+    rover_facing_direction = rover_facing_direction[0]
+    puts "Direction starts with #{rover_facing_direction}"
 
 end
 
