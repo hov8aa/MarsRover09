@@ -57,8 +57,19 @@ def get_user_input
     while i <= movement.length
         instruction = movement.slice(i)
         if instruction == "L"
-            puts "The current instruction is L"
+            puts "The current instruction is L, Turn Left"
+            #To turn the rover to left direction from it's currrent position, we need to know it's current direction.
+            
         end
+
+        if instruction == "R"
+            puts "The current instruction is R, Turn Right"
+        end
+
+        if instruction == "M"
+            puts "The current instruction is M, Move forward"
+        end
+
         i +=1
     end
 
