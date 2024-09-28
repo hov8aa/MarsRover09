@@ -27,6 +27,9 @@ def get_user_input
     puts "I see, There are #{movement.length} instructions."
 
     #Now, process the instructions to move the rover
+    rover_position_x_coordinate = rover_position_x_coordinate.to_f
+    rover_position_y_coordinate = rover_position_y_coordinate.to_f
+
     i = 0
     while i <= movement.length
         instruction = movement.slice(i)
@@ -73,23 +76,23 @@ def get_user_input
 
             if rover_facing_direction == "E"
                 #+1 to x coordinate
-                rover_position_x_coordinate = rover_position_x_coordinate.to_f
                 rover_position_x_coordinate += 1
+                puts "New rover position is #{rover_position_x_coordinate} #{rover_position_y_coordinate}"
             
             elsif rover_facing_direction == "N"
                 #+1 to y coordinate
-                rover_position_y_coordinate = rover_position_y_coordinate.to_f
                 rover_position_y_coordinate += 1
+                puts "New rover position is #{rover_position_x_coordinate} #{rover_position_y_coordinate}"
             
             elsif rover_facing_direction == "W"
                 #-1 to x coordinate
-                rover_position_x_coordinate = rover_position_x_coordinate.to_f
                 rover_position_x_coordinate -= 1
+                puts "New rover position is #{rover_position_x_coordinate} #{rover_position_y_coordinate}"
             
             else rover_facing_direction == "S"
                 #-1 to y coordinate
-                rover_position_y_coordinate = rover_position_y_coordinate.to_f
                 rover_position_y_coordinate -= 1
+                puts "New rover position is #{rover_position_x_coordinate} #{rover_position_y_coordinate}"
             end
 
         end
