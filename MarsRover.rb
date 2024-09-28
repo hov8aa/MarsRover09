@@ -33,7 +33,19 @@ def get_user_input
         if instruction == "L"
             puts "The current instruction is L, Turn Left"
             #To turn the rover to left direction from it's currrent position, we need to know it's current direction.
-            #rover_facing_direction = 
+            if rover_facing_direction == "E"
+                rover_facing_direction = 'N'
+            end
+            if rover_facing_direction == "N"
+                rover_facing_direction = 'W'
+            end
+            if rover_facing_direction == "W"
+                rover_facing_direction = 'S'
+            end
+            if rover_facing_direction == "S"
+                rover_facing_direction = 'E'
+            end
+            puts "New Rover direction is #{rover_facing_direction}"
         end
 
         if instruction == "R"
