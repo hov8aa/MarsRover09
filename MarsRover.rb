@@ -93,6 +93,7 @@ def get_user_input
                 #-1 to y coordinate
                 rover_position_y_coordinate -= 1
                 puts "New rover position is #{rover_position_x_coordinate} #{rover_position_y_coordinate}"
+
             end
 
         end
