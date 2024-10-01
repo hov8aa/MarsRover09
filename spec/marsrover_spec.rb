@@ -14,8 +14,10 @@ end
 # New Learning: "expect" is the key to resolve this situation.
 # Hypothetical statement would be something like this:
 
-# Input coortinates & location : 1,2,N
-# Output coordinates & location : 1,3,N
-# expect(input location coordinates & direction).to eq(1,3,N)
+# Input coortinates & direction : 1,2,N
+# Output coordinates & direction : 1,3,N
+# if input is x then output eq(1,3,N)
 
 # expect(1,2,N).to eq(1,3,N) (to be very specific)
+
+# New hypothesis: I need to understand expect keyword and matchers which seem to hold the key
