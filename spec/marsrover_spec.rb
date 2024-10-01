@@ -10,3 +10,4 @@ describe "#get_user_input" do
 end
 
 #Hypothesis: It's possible to write the test cases with rspec with a function in base file without taking arguments as inputs.
+#Current Query: how to test a fucntion that doesn't take arguments in ruby specs
